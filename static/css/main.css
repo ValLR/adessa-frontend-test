@@ -4,12 +4,16 @@
   border: 0; }
   * #purchase #total-box {
     background-color: green;
-    color: whitesmoke; }
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 25px; }
   * #purchase .product-box {
     background-color: whitesmoke;
     padding-left: 0;
     padding-right: 0;
-    margin: 3px; }
+    margin: 5px; }
     * #purchase .product-box img {
       border: 2px solid black; }
     * #purchase .product-box p {
@@ -29,7 +33,7 @@
       background-color: whitesmoke;
       padding-left: 0;
       padding-right: 0;
-      margin: 3px; }
+      margin: 5px; }
       * #productList .product-box img {
         border: 2px solid black; }
       * #productList .product-box p {

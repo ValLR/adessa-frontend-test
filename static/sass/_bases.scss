@@ -6,6 +6,10 @@
 		#total-box{
 			background-color:green;
 			color:whitesmoke;
+			font-weight: bold;
+			font-size:15px;
+			padding:10px;
+			border-radius:25px;
 		}
 		.product-box{
 			@include basic-box;
