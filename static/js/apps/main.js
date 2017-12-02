@@ -1,25 +1,6 @@
 $(document).ready(function() {
 	var value = 0;
-	$("#val").text(value);
-		$("#clear1").click(function(){
-			alert("no")
-		});
-
-		$("#cle2").click(function(){
-			alert("no")
-		});
-
-		$("#cle3").click(function(){
-			alert("no")
-		});
-
-		$("#cle4").click(function(){
-			alert("no")
-		});
-
-		$("#cle5").click(function(){
-			alert("no")
-		});																
+	$("#value").text(value);	
 	catalog.forEach(function(el){
 		console.log(el.id);
 		console.log(el.name);
@@ -29,16 +10,10 @@ $(document).ready(function() {
 		var allProducts = `
 
 					<div class="center-align col l2 m2 s6 product-box">
-						<div class="row">
-							<img src="`+ el.imageURL +`" alt="image`+ el.id +`">
-						</div>
-						<div class="row">
-							<b>`+ el.name +`<br>
-							<b>`+ el.currency + el.price+`</b>
-						</div>
-						<div class="row add">
-							<a class="waves-effect waves-light btn add-button" id="`+ el.id +`"><i class="material-icons left">add_shopping_cart</i>Add to Cart</a>
-						</div>
+						<img src="`+ el.imageURL +`" alt="image`+ el.id +`">
+						<p><b>`+ el.name +`</p>
+						<p>`+ el.currency + el.price+`</b></p>
+						<a class="waves-effect waves-light btn add-button" id="`+ el.id +`"><i class="material-icons left">add_shopping_cart</i>Add to Cart</a>
 					</div>
 		`
 		allProducts = $(allProducts);
@@ -46,9 +21,40 @@ $(document).ready(function() {
 
 
 	});
+	$(".add-button").click(function(){
+		var element = $(this).parent();
+		$("#cartProducts").append(element);
+		var id= $(this).attr("id");
+		$("#"+ id).removeClass("add-button").addClass("remove-button");
+		$("#"+ id).text("");
+		$("#"+ id).append(`<i class="material-icons left">clear</i>Remove`);
+		if(id==="1"){
+			value += 250;
+			$("#value").text(value);
+		}
+		else if(id==="2"){
+			value += 350;
+			$("#value").text(value);
+		}
+		else if(id==="3"){
+			value += 200;
+			$("#value").text(value);
+		}
+		else if(id==="4"){
+			value+=500;
+			$("#value").text(value);
+		}
+		else if(id===5){
+			value+=100;
+			$("#value").text(value);
+		}
+
+	})
 
 
-	
+
+/*
+
 		$("#1").click(function(){
 			console.log(value)
 			$("#cartProducts").append(`
@@ -57,10 +63,11 @@ $(document).ready(function() {
 							<img src="http://placehold.it/150/1b21a0/ffffff">
 						</div>
 						<div class="row">
-							<b>product A<br> $250</b>
+							<b>product A<br>
+							<b>$250</b>
 						</div>
 						<div class="row">
-  							<a id="clear1" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">clear</i></a>
+							<a class="waves-effect waves-light btn clear-button" id="cle1"><i class="material-icons left">clear</i>Remove from cart</a>
 						</div>
 					</div>
 				`			
@@ -81,7 +88,7 @@ $(document).ready(function() {
 							<b>$350</b>
 						</div>
 						<div class="row">
-  							<a id="clear1" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">clear</i></a>
+							<a class="waves-effect waves-light btn clear-button" id="cle2"><i class="material-icons left">clear</i>Remove from cart</a>
 						</div>
 					</div>
 				`			
@@ -102,7 +109,8 @@ $(document).ready(function() {
 							<b>$200</b>
 						</div>
 						<div class="row">
-  							<a id="clear1" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">clear</i></a>						</div>
+							<a class="waves-effect waves-light btn clear-button" id="cle3"><i class="material-icons left">clear</i>Remove from cart</a>
+						</div>
 					</div>
 				`			
 			)
@@ -122,7 +130,8 @@ $(document).ready(function() {
 							<b>$500</b>
 						</div>
 						<div class="row">
-  							<a id="clear1" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">clear</i></a>						</div>
+							<a class="waves-effect waves-light btn clear-button" id="cle4"><i class="material-icons left">clear</i>Remove from cart</a>
+						</div>
 					</div>
 				`			
 			)
@@ -142,15 +151,13 @@ $(document).ready(function() {
 							<b>$100</b>
 						</div>
 						<div class="row">
-  							<a id="clear1" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">clear</i></a>						</div>
+							<a class="waves-effect waves-light btn clear-button" id="cle5"><i class="material-icons left">clear</i>Remove from cart</a>
+						</div>
 					</div>
 				`			
 			)
 			value += 100;
 			$("#val").text(value);
 		});
-
-
-	
-
+*/
 });
