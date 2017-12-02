@@ -1,5 +1,4 @@
-{
-  "catalog": [
+var catalog = [
     {
       "id": 1,
       "imageURL": "http://placehold.it/150/1b21a0/ffffff",
@@ -40,5 +39,4 @@
       "price": 100,
       "currency": "$"
     }
-  ]
-}
+]
