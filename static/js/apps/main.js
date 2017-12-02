@@ -37,7 +37,27 @@ $(document).ready(function() {
 			var id_show = $("#"+id).attr("class").split(" ").pop();
 			var parentElement= $("#"+id_show).parent();
 			$(parentElement).removeClass("hide");
-			$("#"+id).addClass("hide");		
+			$("#"+id).addClass("hide");
+		if(id_show==="1"){
+			value -= 250;
+			$("#value").text(value);
+		}
+		if(id_show==="2"){
+			value -= 350;
+			$("#value").text(value);
+		}
+		if(id_show==="3"){
+			value -= 200;
+			$("#value").text(value);
+		}
+		if(id_show==="4"){
+			value -= 500;
+			$("#value").text(value);
+		}
+		if(id_show==="5"){
+			value -= 100;
+			$("#value").text(value);
+		}	
 	});
 
 	$(".add-button").click(function(){
@@ -65,81 +85,6 @@ $(document).ready(function() {
 			value += 100;
 			$("#value").text(value);
 		}						
-
-
-/*		var element = $(this).parent();
-		$("#cartProducts").append(element);
-		var id= $(this).attr("id");
-		$("#"+ id).removeClass("add-button").addClass("remove-button");
-		$("#"+ id).text("");
-		$("#"+ id).append(`<i class="material-icons left">clear</i>Remove`);
-		if(id==="1"){
-			value += 250;
-			$("#value").text(value);/*
-			$(".remove-button").click(function(){
-				var element = $(this).parent();
-				$("#product-container").append(element);
-				$("#"+ id).removeClass("remove-button").addClass("add-button");
-				$("#"+ id).text("");
-				$("#"+ id).append(`<i class="material-icons left">add_shopping_cart</i>Add to cart`);				
-				value -= 250;
-				$("#value").text(value);
-			});
-		}
-		else if(id==="2"){
-			value += 350;
-			$("#value").text(value);
-			$(".remove-button").click(function(){
-				var element = $(this).parent();
-				$("#product-container").append(element);
-				$("#"+ id).removeClass("remove-button").addClass("add-button");
-				$("#"+ id).text("");
-				$("#"+ id).append(`<i class="material-icons left">add_shopping_cart</i>Add to cart`);				
-				value -= 350;
-				$("#value").text(value);	
-			});			
-		}
-		else if(id==="3"){
-			value += 200;
-			$("#value").text(value);
-			$(".remove-button").click(function(){
-				var element = $(this).parent();
-				$("#product-container").append(element);
-				$("#"+ id).removeClass("remove-button").addClass("add-button");
-				$("#"+ id).text("");
-				$("#"+ id).append(`<i class="material-icons left">add_shopping_cart</i>Add to cart`);				
-				value -= 200;
-				$("#value").text(value);	
-			});			
-		}
-		else if(id==="4"){
-			value+=500;
-			$("#value").text(value);
-			$(".remove-button").click(function(){
-				var element = $(this).parent();
-				$("#product-container").append(element);
-				$("#"+ id).removeClass("remove-button").addClass("add-button");
-				$("#"+ id).text("");
-				$("#"+ id).append(`<i class="material-icons left">add_shopping_cart</i>Add to cart`);				
-				value -= 500;
-				$("#value").text(value);	
-			});
-		}
-		else if(id===5){
-			value+=100;
-			$("#value").text(value);
-			$(".remove-button").click(function(){
-				var element = $(this).parent();
-				$("#product-container").append(element);
-				$("#"+ id).removeClass("remove-button").addClass("add-button");
-				$("#"+ id).text("");
-				$("#"+ id).append(`<i class="material-icons left">add_shopping_cart</i>Add to cart`);				
-				value -= 100;
-				$("#value").text(value);	
-			});
-		}*/
-
-	})
 
 
 });
