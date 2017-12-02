@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	#purchase{
+		#total-box{
+			background-color:green;
+			color:whitesmoke;
+		}
+		.product-box{
+			@include basic-box;
+		}
+	}
+	#productList{
+		text-align:center;
+		background-color:#FFECEE;
+		padding-left:10%;
+		.product-box{
+			@include basic-box;
+		}
+
+	}
+}

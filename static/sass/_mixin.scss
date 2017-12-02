@@ -1,0 +1,21 @@
+@mixin basic-box{
+		background-color:whitesmoke;
+		padding-left:0;
+		padding-right:0;
+		margin:3px;
+		img{
+			border:2px solid black;
+		}
+		p{
+			margin: 3px;
+			font-size:16px;
+		}
+		a{
+			margin-top:20px;
+			font-size:10px;
+			background-color:purple;
+		}
+		a:hover{
+			background-color:#009688;
+		}	
+	}	
