@@ -17,13 +17,16 @@
 			<div class="row">
 				<div class="col s12 m6 l6">
 					<div class="container-flex left-align" id="total-box">
-						Total<!-- <h4>Total: $ 0</h4> -->
+						<h6 id="finalTotal">Total: $<span id="val">0</span></h6><!-- <h4>Total: $ 0</h4> -->
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="container onCart" id="cartProducts">
-					<!-- here purchased products-->
+				<div class="container onCart">
+					<div class="row" id="cartProducts">
+						
+						<!-- here purchased products-->
+					</div>
 				</div>
 			</div>			
 		</section>
@@ -31,10 +34,12 @@
 			<div class="row">
 				<h5 class="left-align">Product List</h5>
 			</div>
-			<div class="container-flex" id="product-container">
-				<div class="row">				
+			<div class="container-flex">
+				<div class="row" id="product-container">							
 					<!-- here the list of products -->
 					<!-- end -->
+
+
 				</div>					
 			</div>
 		</section>
@@ -45,6 +50,7 @@
 	<script type="text/javascript" src="data/json.js"></script>	
 	<script type="type/javascript" src="static/js/apps/materialize.js"></script>
 	<script type="text/javascript" src="static/js/apps/main.js"></script>
+	<script type="text/javascript" src="static/js/apps/clear.js"></script>
 
 </body>
 </html>
